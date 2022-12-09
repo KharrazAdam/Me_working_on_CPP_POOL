@@ -3,14 +3,11 @@
 
 #include "Contact.hpp"
 
-
-
-
 class PhoneBook
 {
-    private:
-        // Contact contact[8];
-    public:
+	private:
+		Contact contact[MAX_CONTACTS];
+	public:
 };
 
 #endif // PHONEBOOK_HPP
