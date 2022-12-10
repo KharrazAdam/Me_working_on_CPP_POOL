@@ -6,26 +6,27 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 23:32:47 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/09 10:32:15 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/11 00:53:36 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-void	Contact::set(void)
-{	
-	std::cout << "insert your first name :";
-	std::cin >> first_name;
-	std::cout << "insert your last name :";
-	std::cin >> last_name;
-	std::cout << "insert your nick name :";
-	std::cin >> nick_name;
-	return ;
+void	Contact::set()
+{
+	std::cout << "your first name : ";
+	getline(std::cin, this->first_name);
+	std::cout << "your last_name : ";
+	getline(std::cin, this->last_name);
+	std::cout << "your nickname : ";
+	getline(std::cin, this->nickname);
+	std::cout << "your phone number : ";
+	getline(std::cin, this->phone_number);
+	std::cout << "your darkest secret : ";
+	getline(std::cin, this->darkest_secret);
 }
 
 void	Contact::get()
 {
-	std::cout << "the first name is : " << first_name << std::endl;
-	std::cout << "the last name is : " << last_name << std::endl;
-	std::cout << "the nick name is : " << nick_name << std::endl;
+	    std::cout << first_name << " " << last_name << ' ' << nickname << ' ' << phone_number << ' ' << darkest_secret << '\n';
 }

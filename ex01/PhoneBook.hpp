@@ -8,6 +8,8 @@ class PhoneBook
 	private:
 		Contact contact[MAX_CONTACTS];
 	public:
+		void	set(int);
+		void	get(int);
 };
 
 #endif // PHONEBOOK_HPP
