@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 08:49:04 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/11 00:52:46 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/11 04:33:20 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	PhoneBook::set(int i)
 {
-	contact[i].set();
+	contact[i].set(i);
 }
 
 void    PhoneBook::get(int i)

@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 01:05:15 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/11 00:12:56 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/11 04:33:00 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,13 @@ int main(void)
 	{
 		getline(std::cin, command);
 		if (!command.compare("ADD"))
-		{
-			i++;
-			phonebook.set(i % MAX_CONTACTS);
-		}
-		if (!command.compare("SEARCH"))
-		{
+			phonebook.set(++i % MAX_CONTACTS);
+		else if (!command.compare("SEARCH"))
 			phonebook.get(i % MAX_CONTACTS);
-		}
+		else if (!command.compare("EXIT"))
+            return (0);
+        else 
+            ;
 	}
 	return (0);
 }
