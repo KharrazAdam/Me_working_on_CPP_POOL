@@ -4,19 +4,19 @@
 // MACROS
 enum ice_crem{
 	MAX_CONTACTS = 8,
-	PHONE_NUMBER   ,
-    STRING         
+	PHONE_NUMBER	,
+	STRING         
 
 };
 
 // includes 
 	# include <iostream>
-    # include <cctype>
+	# include <cctype>
 
 class Contact
 {
 	private:
-        int         id;
+		int         id;
 		std::string	first_name;
 		std::string	last_name;
 		std::string	nickname;
@@ -26,8 +26,8 @@ class Contact
 	public :
 		void		set(int);
 		void		get(void);
-        void        creat_table(void);
-        void        display(void);
+		void		creat_table(void);
+		void		display(void);
 };
 
 #endif // CONTACT_HPP

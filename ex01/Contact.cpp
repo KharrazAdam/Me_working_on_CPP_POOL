@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 23:32:47 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/12 15:39:00 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/12 16:51:05 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void    fill_form(std::string& data, const char *str, int n)
 	{
         if (std::cin.eof())
             std::cout << '\n';
-		std::cout << "please insert your " << str <<  ": ";
+		std::cout << "please insert your " << str <<  ": \n";
 		fill_form(data, str, n);
 		return ;
 	}
@@ -42,7 +42,7 @@ void    fill_form(std::string& data, const char *str, int n)
 		{
 			if (!isdigit(data[idx]))
 			{
-				std::cout << "please insert a number: ";
+				std::cout << "please insert a number: \n";
 				fill_form(data, str, n);
 				return ;
 			}
