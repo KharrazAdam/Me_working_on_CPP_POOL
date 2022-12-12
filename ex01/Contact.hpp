@@ -3,7 +3,7 @@
 
 // MACROS
 enum ice_crem{
-	MAX_CONTACTS = 2,
+	MAX_CONTACTS = 8,
 	PHONE_NUMBER   ,
     STRING         
 

@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 23:32:47 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/12 06:50:47 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/12 15:39:00 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,16 @@
  */
 void    fill_form(std::string& data, const char *str, int n)
 {
+    if (std::cin.eof() == true)
+    {
+        std::cin.clear();
+        clearerr(stdin);
+    }
 	getline(std::cin, data);
-	if (data.empty() == true)
+	if (data.empty() == true || std::cin.eof() == true)
 	{
+        if (std::cin.eof())
+            std::cout << '\n';
 		std::cout << "please insert your " << str <<  ": ";
 		fill_form(data, str, n);
 		return ;

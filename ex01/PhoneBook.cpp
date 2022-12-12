@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 08:49:04 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/12 08:56:31 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/12 15:47:36 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,18 @@ void	PhoneBook::ask_contact_id(int i)
 		return ;
 	}
 	std::cout << "insert the index of a contact : ";
-	getline(std::cin, idx);
+	if (std::cin.eof() == true)
+    {
+        std::cin.clear();
+        clearerr(stdin);
+    }
+    getline(std::cin, idx);
+    if (std::cin.eof())
+    {
+        std::cout << '\n';
+        ask_contact_id(i);
+        return ;
+    }
 	for (size_t x = 0; x < idx.length(); x++)
 	{
 		if (!isdigit(idx[x]))
