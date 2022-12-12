@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 08:49:04 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/12 06:58:57 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/12 08:56:31 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	PhoneBook::ask_contact_id(int i)
 			return ;
 		}
 	}
-	else if (stoi(idx) < 0 || stoi(idx) > i)
+	if (stoi(idx) < 0 || stoi(idx) > i)
 	{
 		std::cerr << idx << " is not a valid id !\n";
 		ask_contact_id(i);
@@ -52,8 +52,12 @@ void    PhoneBook::get(int i)
 	std::cout << std::string(45, '-' ) << '\n';
 	std::cout << "|     index|first_name| last_name|  nickname|\n";
 	std::cout << std::string(45, '-' ) << '\n';
-	for (int index = 0; index <= i; index++)   
-		contact[index].get();
+    if (i >= MAX_CONTACTS)
+	    for (int index = 0; index < MAX_CONTACTS; index++)   
+		    contact[index].get();
+    else
+	    for (int index = 0; index <= i; index++)   
+		    contact[index].get();
 	ask_contact_id(i);
 	return ;
 }

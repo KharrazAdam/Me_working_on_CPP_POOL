@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 01:05:15 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/12 06:55:53 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/12 08:59:20 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main(void)
 		if (!command.compare("ADD"))
 			phonebook.set(++i % MAX_CONTACTS);
 		else if (!command.compare("SEARCH"))
-			phonebook.get(i % MAX_CONTACTS);
+			phonebook.get(i);
 		else if (!command.compare("EXIT"))
             return (0);
 	}
