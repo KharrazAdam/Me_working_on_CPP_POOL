@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 23:32:47 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/12 16:51:05 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/12 16:55:08 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,15 +53,15 @@ void    fill_form(std::string& data, const char *str, int n)
 void	Contact::set(int id)
 {
 	this->id = id;
-	std::cout << "your first name: ";
+	std::cout << "your first name: \n";
 	fill_form(first_name, "first name", STRING);
-	std::cout << "your last name: ";
+	std::cout << "your last name: \n";
 	fill_form(last_name, "last name", STRING);
-	std::cout << "your nickname: ";
+	std::cout << "your nickname: \n";
 	fill_form(nickname, "nickname", STRING);
-	std::cout << "your phone number: ";
+	std::cout << "your phone number: \n";
 	fill_form(phone_number, "phone number", PHONE_NUMBER);
-	std::cout << "your darkest secret: ";
+	std::cout << "your darkest secret: \n";
 	fill_form(darkest_secret, "darkest secret", STRING);
 }
 
