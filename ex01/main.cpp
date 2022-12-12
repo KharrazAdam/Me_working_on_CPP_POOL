@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 01:05:15 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/12 16:51:18 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/12 16:53:04 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main(void)
 		{
 			std::cin.clear();
 			clearerr(stdin);
-			std::cout << std::endl;
+			std::cout << '\n';
 			continue;
 		}
 		std::cout << "insert ADD or SEARCH or Exit: \n";
