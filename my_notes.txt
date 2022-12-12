@@ -1,0 +1,3 @@
+* if i have more 8 contacts;
+* CTRL D or inserting alphabets;
+* insert message is doubled;

@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 23:32:47 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/11 05:50:17 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/12 06:50:47 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void    fill_form(std::string& data, const char *str, int n)
 			{
 				std::cout << "please insert a number: ";
 				fill_form(data, str, n);
-				return ;				
+				return ;
 			}
 		}
 	}
@@ -58,7 +58,16 @@ void	Contact::set(int id)
 	fill_form(darkest_secret, "darkest secret", STRING);
 }
 
+void	Contact::display()
+{
+	std::cout << "the contact's first name is : " << first_name << '\n';
+	std::cout << "the contact's last name is : " << last_name << '\n';
+	std::cout << "the contact's nickname is : " << nickname << '\n';
+	std::cout << "the contact's phone number is : " << phone_number << '\n';
+	std::cout << "the contact's darkest secret is : " << darkest_secret << '\n';
+}
+
 void	Contact::get()
 {   
-		std::cout << id << " " << first_name << " " << last_name << ' ' << nickname << ' ' << phone_number << ' ' << darkest_secret << '\n';
+	creat_table();
 }

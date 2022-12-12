@@ -10,6 +10,7 @@ class PhoneBook
 	public:
 		void	set(int);
 		void	get(int);
+        void    ask_contact_id(int i);
 };
 
 #endif // PHONEBOOK_HPP

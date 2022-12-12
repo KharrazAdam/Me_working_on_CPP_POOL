@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 01:05:15 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/11 04:33:00 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/12 06:55:53 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main(void)
 	int i = -1;
 	while (1)
 	{
+        std::cout << "insert ADD or SEARCH or Exit: ";
 		getline(std::cin, command);
 		if (!command.compare("ADD"))
 			phonebook.set(++i % MAX_CONTACTS);
@@ -27,8 +28,6 @@ int main(void)
 			phonebook.get(i % MAX_CONTACTS);
 		else if (!command.compare("EXIT"))
             return (0);
-        else 
-            ;
 	}
 	return (0);
 }
