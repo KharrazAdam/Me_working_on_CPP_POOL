@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/13 00:39:32 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/14 06:21:36 by akharraz         ###   ########.fr       */
+/*   Created: 2022/12/14 06:20:53 by akharraz          #+#    #+#             */
+/*   Updated: 2022/12/14 06:21:03 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void	Zombie::announce(void)
+int main(void)
 {
-	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	Zombie zombie;
+
+	std::string adam("Adam");
+	zombie.randomChump(adam);
+	return (0);
 }

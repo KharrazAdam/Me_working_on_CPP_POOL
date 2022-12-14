@@ -6,13 +6,13 @@
 #    By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/06 01:21:56 by akharraz          #+#    #+#              #
-#    Updated: 2022/12/09 13:57:18 by akharraz         ###   ########.fr        #
+#    Updated: 2022/12/14 09:49:59 by akharraz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = megaphone
 
-SRC = negaphone.cpp
+SRC = megaphone.cpp
 
 OBJS = megaphone.o
 
