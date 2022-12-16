@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/14 11:33:06 by akharraz          #+#    #+#              #
-#    Updated: 2022/12/14 11:33:07 by akharraz         ###   ########.fr        #
+#    Created: 2022/12/14 11:33:14 by akharraz          #+#    #+#              #
+#    Updated: 2022/12/15 11:35:55 by akharraz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Zombie
 
-SRC = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
+# SRC = Zombie.cpp zombieHorde.cpp main.cpp
 
-OBJS = Zombie.o newZombie.o randomChump.o main.o
+OBJS = Zombie.o zombieHorde.o main.o
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
