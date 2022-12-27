@@ -5,34 +5,28 @@
 #                                                     +:+ +:+         +:+      #
 #    By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/14 11:33:06 by akharraz          #+#    #+#              #
-#    Updated: 2022/12/14 11:33:07 by akharraz         ###   ########.fr        #
+#    Created: 2022/12/27 11:05:15 by akharraz          #+#    #+#              #
+#    Updated: 2022/12/27 11:49:42 by akharraz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Zombie
 
-SRC = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
+SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
-OBJS = Zombie.o newZombie.o randomChump.o main.o
+OBJ = main.o Zombie.o newZombie.o randomChump.o
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+all: ${NAME}
 
-CC = c++
+${NAME} : ${OBJ}
 
+%.o : %.c
+	c++ -Wall -Wextra -Werror $< -o $@ 
 
-all : ${NAME}
-
-${NAME} : ${OBJS}
-	${CC} ${FLAGS} ${OBJS} -o ${NAME}
-
-${OBJS} : %.o: %.cpp
-	${CC} -c $(FLAGS) $< -o $@ -c
-
-clean : 
-	rm -rf ${OBJS}
+clean :
+	rm -f ${SRC}
 
 fclean : clean
-	rm -rf ${NAME}
+	rm -f ${NAME}
 
 re : fclean all
