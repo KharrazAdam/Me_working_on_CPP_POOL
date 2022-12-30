@@ -6,7 +6,7 @@
 #    By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/14 11:33:14 by akharraz          #+#    #+#              #
-#    Updated: 2022/12/15 11:35:55 by akharraz         ###   ########.fr        #
+#    Updated: 2022/12/30 13:08:44 by akharraz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = Zombie
 
 OBJS = Zombie.o zombieHorde.o main.o
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = 
 
 CC = c++
 

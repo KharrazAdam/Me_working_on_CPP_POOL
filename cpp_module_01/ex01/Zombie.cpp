@@ -5,43 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/14 11:21:34 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/16 19:24:32 by akharraz         ###   ########.fr       */
+/*   Created: 2022/12/30 12:36:33 by akharraz          #+#    #+#             */
+/*   Updated: 2022/12/30 15:28:23 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie()
+void    Zombie::set_value(std::string a)
 {
-    std::cout << "constructor called " << std::endl;    
+	name = a;
 }
 
-Zombie::~Zombie()
+Zombie::~Zombie( void )
 {
-    std::cout << "destructor called " << name << std::endl;    
+	std::cout << "destructor called on : " << name << "\n";
 }
 
-Zombie* Zombie::newZombie( std::string adam )
+Zombie::Zombie( void )
 {
-	Zombie  *zombie;
-
-	zombie = new Zombie;
-	zombie->name = adam;
-	return (zombie);
+	std::cout << "constructor called\n";
 }
 
-void Zombie::randomChump( std::string adam )
+void Zombie::announce( void )
 {
-	Zombie *zombie;
-
-	zombie = newZombie(adam);
-	zombie->announce();
-	delete zombie;
-	return ;
-}
-
-void	Zombie::announce(void)
-{
-	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->name << ": BraiiiiiiinnnzzzZ...\n";
 }
