@@ -6,17 +6,14 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 13:56:28 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/27 11:15:59 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/29 13:37:43 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie* Zombie::newZombie( std::string name )
+Zombie* newZombie( std::string name )
 {
-    Zombie *zombie;
-
-    zombie = new(Zombie);
-    zombie->name = name;
+    Zombie *zombie = new Zombie(name);
     return zombie;
 }

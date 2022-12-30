@@ -6,7 +6,7 @@
 #    By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/27 11:05:15 by akharraz          #+#    #+#              #
-#    Updated: 2022/12/27 11:49:42 by akharraz         ###   ########.fr        #
+#    Updated: 2022/12/29 08:41:21 by akharraz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +19,12 @@ OBJ = main.o Zombie.o newZombie.o randomChump.o
 all: ${NAME}
 
 ${NAME} : ${OBJ}
-
-%.o : %.c
-	c++ -Wall -Wextra -Werror $< -o $@ 
+	c++   ${OBJ}   -o ${NAME}
+# %.o : %.cpp
+# 	c++ -Wall -Wextra -Werror -std=c++98 $< -o $@ 
 
 clean :
-	rm -f ${SRC}
+	rm -f ${OBJ}
 
 fclean : clean
 	rm -f ${NAME}
