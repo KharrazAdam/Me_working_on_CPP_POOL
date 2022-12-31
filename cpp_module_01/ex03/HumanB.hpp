@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 21:58:48 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/31 23:32:48 by akharraz         ###   ########.fr       */
+/*   Updated: 2022/12/31 23:37:02 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ public:
     HumanB(std::string);
     ~HumanB();
     void	attack(void);
-    void	setWeapon(Weapon);
+    void	setWeapon(Weapon&);
 };
