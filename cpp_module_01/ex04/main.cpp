@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 14:21:55 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/02 17:49:01 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/04 00:53:16 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int changeRes(std::string &res, const char *src, const char *dest)
 {
 	std::string s1(src);
 	std::string s2(dest);
-	int i;
+	unsigned long i;
 
 	while ((i = res.find(s1)) != std::string::npos)
 	{

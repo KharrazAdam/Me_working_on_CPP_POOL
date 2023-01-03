@@ -6,7 +6,7 @@
 #    By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/27 11:05:15 by akharraz          #+#    #+#              #
-#    Updated: 2023/01/04 00:45:04 by akharraz         ###   ########.fr        #
+#    Updated: 2023/01/04 00:48:17 by akharraz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ ${NAME}: ${OBJ}
 	c++ -Wall -Wextra -Werror -std=c++98 -c $< -o $@
 
 clean:
-	rm -f *.o
+	rm -f ${OBJ}
 
 fclean: clean
 	rm -f ${NAME}

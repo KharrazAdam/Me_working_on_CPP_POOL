@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 23:52:15 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/02 23:54:03 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/04 00:55:19 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@ int main()
 {
 	Harl harl;
 
-	harl.complain("DEBUG");
+	harl.complain("dglsfjkdhlghdkl");
+    return (0);
 }

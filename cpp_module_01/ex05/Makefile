@@ -1,25 +1,21 @@
-NAME = main
+NAME = Harl
 
-SRC = main.cpp 
+SRC = main.cpp Harl.cpp
 
-OBJS = main.o 
+OBJ = main.o Harl.o
 
-FLAGS = 
+all: ${NAME}
 
-CC = c++
+${NAME}: ${OBJ} 
+	c++ -Wall -Wextra -Werror -std=c++98 $(OBJ) -o $(NAME)
 
-all : ${NAME}
+%.o : %.cpp ${HEADER}
+	c++ -Wall -Wextra -Werror -std=c++98 -c $< -o $@
 
-${NAME} : ${OBJS}
-	${CC} ${FLAGS} ${OBJS} -o ${NAME}
+clean:
+	rm -f ${OBJ}
 
-${OBJS} : %.o: %.cpp
-	${CC} -c $(FLAGS) $< -o $@ -c
+fclean: clean
+	rm -f ${NAME}
 
-clean : 
-	rm -rf ${OBJS}
-
-fclean : clean
-	rm -rf ${NAME}
-
-re : fclean all
+re: fclean all

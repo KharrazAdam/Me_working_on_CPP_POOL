@@ -6,34 +6,31 @@
 #    By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/16 21:46:58 by akharraz          #+#    #+#              #
-#    Updated: 2022/12/16 21:46:59 by akharraz         ###   ########.fr        #
+#    Updated: 2023/01/04 00:50:51 by akharraz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = main
 
-# SRC = Zombie.cpp zombieHorde.cpp main.cpp
+SRC = main.cpp
 
-OBJS = main.o
+OBJ = main.o
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-CC = c++
+all: ${NAME}
 
+${NAME}: ${OBJ} 
+	c++ -Wall -Wextra -Werror -std=c++98 $(OBJ) -o $(NAME)
 
-all : ${NAME}
+%.o : %.cpp ${HEADER}
+	c++ -Wall -Wextra -Werror -std=c++98 -c $< -o $@
 
-${NAME} : ${OBJS}
-	${CC} ${FLAGS} ${OBJS} -o ${NAME}
+clean:
+	rm -f ${OBJ}
 
-${OBJS} : %.o: %.cpp
-	${CC} -c $(FLAGS) $< -o $@ -c
+fclean: clean
+	rm -f ${NAME}
 
-clean : 
-	rm -rf ${OBJS}
-
-fclean : clean
-	rm -rf ${NAME}
-
-re : fclean all
+re: fclean all

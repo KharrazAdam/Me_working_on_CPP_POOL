@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 18:17:47 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/03 20:18:59 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/03 23:38:08 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,4 @@ void Harl::complain(std::string s)
 		return ;
 	void (Harl::*pointer_name[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	(this->*pointer_name[index])();
-    debug();
 }
