@@ -5,29 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/31 14:26:35 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/01 02:02:44 by akharraz         ###   ########.fr       */
+/*   Created: 2023/01/03 23:10:42 by akharraz          #+#    #+#             */
+/*   Updated: 2023/01/03 23:13:39 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "HumanA.hpp"
-# include "HumanB.hpp"
+# include "Harl.hpp"
 
-int main()
+int main(int ac, char **av)
 {
-	{
-		Weapon club("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-	    Weapon club = Weapon("crude spiked club");
-	    HumanB jim("Jim");
-	    jim.setWeapon(club);
-	    jim.attack();
-	    club.setType("some other type of club");
-	    jim.attack();
-	}
+    Harl    harl;
+    if (ac == 2)
+    {
+        std::string str(av[1]);
+        harl.complain(str);
+        return (0);
+    }
+    return (1);
 }

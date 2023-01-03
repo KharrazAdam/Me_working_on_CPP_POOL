@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/31 14:26:35 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/01 02:02:44 by akharraz         ###   ########.fr       */
+/*   Created: 2023/01/02 17:51:31 by akharraz          #+#    #+#             */
+/*   Updated: 2023/01/03 20:16:41 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "HumanA.hpp"
-# include "HumanB.hpp"
+# ifndef HARL_HPP
+#define HARL_HPP
 
-int main()
+# include <iostream>
+
+class Harl
 {
-	{
-		Weapon club("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-	    Weapon club = Weapon("crude spiked club");
-	    HumanB jim("Jim");
-	    jim.setWeapon(club);
-	    jim.attack();
-	    club.setType("some other type of club");
-	    jim.attack();
-	}
-}
+private:
+    void debug( void );
+    void info( void );
+    void warning( void );
+    void error( void );
+public:
+    void complain( std::string level );
+    Harl(/* args */);
+    ~Harl();
+};
+
+
+// return_type (class_name::*pointer_name)(arguments);
+// typedef void (Harl::*pointer_name)(void);
+#endif //HARL_HPP
