@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 21:20:37 by akharraz          #+#    #+#             */
-/*   Updated: 2022/12/16 22:31:24 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/04 01:00:00 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int main()
 	std::cout << "The memory address held by stringPTR    : " << stringPTR << '\n';
 	std::cout << "The memory address held by stringREF    : " << &stringREF << '\n';
 
-
+    std::cout << "The value of the string adam is         : " << adam << '\n';
+    std::cout << "The value pointed to by stringPTR       : " << *stringPTR << '\n';
+    std::cout << "The value pointed to by stringREF       : " << stringREF << '\n';
 	return (0);
 }
