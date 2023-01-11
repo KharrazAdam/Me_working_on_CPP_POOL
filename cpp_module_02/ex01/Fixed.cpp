@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 04:38:57 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/09 08:59:56 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/09 12:04:51 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ Fixed::Fixed(const int n)
 Fixed::Fixed(const float n)
 {
 	std::cout << "Float constructor called \n";
-	fixed_point = n * 256; // 256 is 2^8;
+    float tmp = n * 256; // 256 is 2^8;
+	fixed_point = (roundf(tmp)); 
 }
 
 Fixed::Fixed(const Fixed& a)
@@ -37,12 +38,13 @@ Fixed::Fixed(const Fixed& a)
 	std::cout << "Copy constructor called\n";
 	*this = a;
 }
+
 	// Copy assignment operator
 
 Fixed&  Fixed::operator =(const Fixed& right_handside)
 {
 	std::cout << "Copy assignment operator called\n";
-	this->fixed_point = right_handside.getRawBits();
+	this->fixed_point = right_handside.fixed_point;
 	return *this;
 }
 
@@ -54,38 +56,22 @@ Fixed::~Fixed()
 }
 
 	// function to implement
+
 float Fixed::toFloat( void ) const
 {
-	float	to;
-
-    to = fixed_point / 256;
-	return (to);
+    float tmp = (float)(fixed_point) / 256;
+	return (tmp);
 }
 
 int Fixed::toInt( void ) const
 {
-    int to;
-    
-    to = fixed_point >> frac_bits;
-    return (to);
+	return (fixed_point >> frac_bits);
 }
 
-void Fixed::setRawBits( int const raw )
-{
-	std::cout << "setRawBits member function called\n";
-	this->fixed_point = raw;
-}
+	// overload func
 
-int	Fixed::getRawBits( void ) const
+std::ostream&  operator <<(std::ostream& output, const Fixed& obj)
 {
-	std::cout << "getRawBits member function called\n";
-	return (fixed_point);
-}
-
-
-    // overload func
-std::ostream&  operator <<(std::ostream& output, Fixed& obj)
-{
-    output << obj.toFloat();
-    return output;
+	output << obj.toFloat();
+	return output;
 }
