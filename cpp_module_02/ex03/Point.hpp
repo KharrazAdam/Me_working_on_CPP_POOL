@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 04:46:32 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/11 06:36:19 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:33:22 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ public:
     // destructor
     ~Point();
     // copy assignement operator 
-    Point& operator=(const Point&);
+    Point operator=(const Point&);
     //getter
-    int getfix_x(void);
-    int getfix_y(void);
+    int getfix_x(void) const;
+    int getfix_y(void) const;
 };
-
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 #endif // POINT_HPP

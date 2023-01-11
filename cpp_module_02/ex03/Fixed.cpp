@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 04:36:49 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/11 06:39:29 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:48:00 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,28 @@
 Fixed::Fixed()
 {
 	fixed_point = 0;
-	std::cout << "Default constructor called of Fixed\n";
+	// std::cout << "Default constructor called of Fixed\n";
 }
 Fixed::Fixed(const int n): fixed_point(n << frac_bits)
 {
-	std::cout << "Int constructor called of Fixed\n";
+	// std::cout << "Int constructor called of Fixed\n";
 	// fixed_point = n << frac_bits;
 }
 Fixed::Fixed(const float n)
 {
-	std::cout << "Float constructor called of Fixed\n";
+	// std::cout << "Float constructor called of Fixed\n";
 	float tmp = n * 256; // 256 is 2^8;
 	fixed_point = (roundf(tmp)); 
 }
 Fixed::Fixed(const Fixed& a)
 {
-	std::cout << "Copy constructor called of Fixed\n";
+	// std::cout << "Copy constructor called of Fixed\n";
 	*this = a;
 }
 	// Copy assignment operator
 Fixed&  Fixed::operator =(const Fixed& right_handside)
 {
-	std::cout << "Copy assignment operator called of Fixed\n";
+	// std::cout << "Copy assignment operator called of Fixed\n";
 	this->fixed_point = right_handside.fixed_point;
 	return *this;
 }
@@ -115,7 +115,7 @@ Fixed	Fixed::operator--(int i)
 	// the destructor :
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called of Fixed\n";	
+	// std::cout << "Destructor called of Fixed\n";	
 }
 	// function to implement:
 float Fixed::toFloat( void ) const
@@ -162,12 +162,12 @@ Fixed& Fixed::min(Fixed& a, Fixed& b)
 //
 void Fixed::setRawBits( int const raw )
 {
-	std::cout << "setRawBits member function called\n";
+	// std::cout << "setRawBits member function called\n";
 	this->fixed_point = raw;
 }
 
 int	Fixed::getRawBits( void ) const
 {
-	std::cout << "getRawBits member function called\n";
+	// std::cout << "getRawBits member function called\n";
 	return (fixed_point);
 }
