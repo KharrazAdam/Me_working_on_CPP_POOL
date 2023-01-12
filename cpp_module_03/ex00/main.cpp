@@ -5,24 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/07 02:21:05 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/12 10:23:54 by akharraz         ###   ########.fr       */
+/*   Created: 2023/01/12 10:42:19 by akharraz          #+#    #+#             */
+/*   Updated: 2023/01/12 16:03:57 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Fixed.hpp"
+#include "ClapTrap.hpp"
 
-int main( void ) 
+int main()
 {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
-
-	c = b;
-
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-
-	return 0;
+    
 }
