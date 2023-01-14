@@ -6,17 +6,17 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 10:44:35 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/14 01:35:26 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/14 01:35:19 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ClapTrap.hpp"
 	// constructors
-ClapTrap::ClapTrap():Hit_points(100), Energy_points(50), Attack_damage(20)
+ClapTrap::ClapTrap():Hit_points(100), Energy_points(100), Attack_damage(30)
 {
 	std::cout << "ClapTrap: default constructor called\n";
 }
-ClapTrap::ClapTrap(std::string name): Hit_points(100), Energy_points(50), Attack_damage(20)
+ClapTrap::ClapTrap(std::string name): Hit_points(100), Energy_points(100), Attack_damage(30)
 {
 	this->name = name;
 	std::cout << "ClapTrap: name constructor called of " << name << '\n';
@@ -43,7 +43,7 @@ ClapTrap::~ClapTrap()
 	// private member function
 bool	ClapTrap::checking()
 {
-	std::cout << "ScavTrap " << name;
+	std::cout << "FragTrap " << name;
 	if (!Hit_points){
 		std::cout << " has no Hit points left\n";
 		return (false);
