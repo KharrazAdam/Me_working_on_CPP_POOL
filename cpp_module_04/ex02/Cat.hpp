@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 19:08:42 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/15 23:05:29 by akharraz         ###   ########.fr       */
+/*   Created: 2023/01/15 03:16:26 by akharraz          #+#    #+#             */
+/*   Updated: 2023/01/15 16:52:28 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef DOG_HPP
-# define DOG_HPP
+# ifndef CAT_HPP
+# define CAT_HPP
 
 # include "Animal.hpp"
 
-class Dog : public Animal
+class Cat : public Animal
 {
-private:
-    Brain* brain;
+protected:
+	Brain* brain;
 public:
 	// constructors
-	Dog(/* args */);
-	Dog(const Dog&);
+	Cat(/* args */);
+	Cat(const Cat&);
 	// copy assignment opearator
-	Dog& operator=(const Dog&);
+	Cat& operator=(const Cat&);
 	// destructor
-	~Dog();
-	void    makeSound(void) const;
-    // check for deepcopy
-    // void    gettptr()
-    // {
-    //     std::cout << brain << '\n';
-    // }
+	~Cat();
+	void	makeSound(void) const;
 };
 
 #endif

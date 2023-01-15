@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 19:08:42 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/15 23:05:29 by akharraz         ###   ########.fr       */
+/*   Created: 2023/01/15 06:22:03 by akharraz          #+#    #+#             */
+/*   Updated: 2023/01/15 16:05:04 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef DOG_HPP
-# define DOG_HPP
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
-# include "Animal.hpp"
+#include <iostream>
 
-class Dog : public Animal
+class Brain
 {
 private:
-    Brain* brain;
+    std::string ideas[100];
 public:
-	// constructors
-	Dog(/* args */);
-	Dog(const Dog&);
-	// copy assignment opearator
-	Dog& operator=(const Dog&);
-	// destructor
-	~Dog();
-	void    makeSound(void) const;
-    // check for deepcopy
-    // void    gettptr()
-    // {
-    //     std::cout << brain << '\n';
-    // }
+    // constructor:
+    Brain(/* args */);
+    Brain(const Brain&);
+    // copy assignment operator
+    Brain& operator =(const Brain&);
+    // destructors:
+    ~Brain();
 };
+
 
 #endif

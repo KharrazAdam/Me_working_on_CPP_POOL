@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 19:08:42 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/15 23:05:29 by akharraz         ###   ########.fr       */
+/*   Created: 2023/01/15 03:33:24 by akharraz          #+#    #+#             */
+/*   Updated: 2023/01/15 03:41:56 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef DOG_HPP
-# define DOG_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
-# include "Animal.hpp"
+#include <iostream>
 
-class Dog : public Animal
+class WrongAnimal
 {
-private:
-    Brain* brain;
+protected:
+	std::string type;
 public:
 	// constructors
-	Dog(/* args */);
-	Dog(const Dog&);
+	WrongAnimal(/* args */);
+	WrongAnimal(const WrongAnimal&);
+	WrongAnimal(std::string);
 	// copy assignment opearator
-	Dog& operator=(const Dog&);
+    WrongAnimal& operator=(const WrongAnimal&);
 	// destructor
-	~Dog();
-	void    makeSound(void) const;
-    // check for deepcopy
-    // void    gettptr()
-    // {
-    //     std::cout << brain << '\n';
-    // }
+	~WrongAnimal();
+    // public member function
+    std::string         getType(void) const;
+    void	    makeSound(void) const;
 };
 
 #endif

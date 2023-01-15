@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 18:43:36 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/15 23:32:35 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/15 23:38:05 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int main(void)
     // freeing
     for (size_t i = 0; i < 6; i++)
         delete animal[i];
-    system ("leaks Brain");
+    system ("leaks leaks Abstract_class");
 }

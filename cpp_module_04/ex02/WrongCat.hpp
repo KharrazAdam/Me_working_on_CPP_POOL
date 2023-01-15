@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 19:08:42 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/15 23:05:29 by akharraz         ###   ########.fr       */
+/*   Created: 2023/01/15 03:32:15 by akharraz          #+#    #+#             */
+/*   Updated: 2023/01/15 03:32:57 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef DOG_HPP
-# define DOG_HPP
+# ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-# include "Animal.hpp"
+# include "WrongAnimal.hpp"
 
-class Dog : public Animal
+class WrongCat : public WrongAnimal
 {
-private:
-    Brain* brain;
+protected:
+	// empty field;
 public:
 	// constructors
-	Dog(/* args */);
-	Dog(const Dog&);
+	WrongCat(/* args */);
+	WrongCat(const WrongCat&);
 	// copy assignment opearator
-	Dog& operator=(const Dog&);
+	WrongCat& operator=(const WrongCat&);
 	// destructor
-	~Dog();
-	void    makeSound(void) const;
-    // check for deepcopy
-    // void    gettptr()
-    // {
-    //     std::cout << brain << '\n';
-    // }
+	~WrongCat();
+	void	makeSound(void) const;
 };
 
 #endif
