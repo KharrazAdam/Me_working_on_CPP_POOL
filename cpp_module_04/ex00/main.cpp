@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 18:43:36 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/15 03:46:07 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/15 06:02:57 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,18 @@ int main(void)
 		j->makeSound();
 		i->makeSound();
 		meta->makeSound();
+        delete (i);
+        delete (j);
+        delete (meta);
 	}
 	// without using a virtual function
 	{
 		const WrongAnimal* meta = new WrongAnimal();
 		const WrongAnimal* i = new WrongCat();
 		i->makeSound();
-		meta->makeSound();		
+		meta->makeSound();
+        delete (meta);
+        delete (i);
 	}
 	return (0);
 }

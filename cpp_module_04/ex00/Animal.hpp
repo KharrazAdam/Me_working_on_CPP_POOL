@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 16:31:15 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/15 01:51:25 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/15 06:02:09 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,13 @@ public:
 	Animal(const Animal&);
 	Animal(std::string);
 	// copy assignment opearator
-    Animal& operator=(const Animal&);
+	Animal& operator=(const Animal&);
 	// destructor
-	~Animal();
-    // public member function
-    std::string getType(void) const;
-    virtual void	    makeSound(void) const;
+	// ~Animal();
+	virtual ~Animal();
+	// public member function
+	std::string getType(void) const;
+	virtual void	    makeSound(void) const;
 };
 
 #endif

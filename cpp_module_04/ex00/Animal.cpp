@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 16:44:24 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/15 03:30:04 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/15 06:02:02 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Animal& Animal::operator=(const Animal& obj)
 	this->type = obj.type;
 	return (*this);
 }
-// destructor
+// destructors
 Animal::~Animal()
 {
 	std::cout << "Animal destructor called\n";
