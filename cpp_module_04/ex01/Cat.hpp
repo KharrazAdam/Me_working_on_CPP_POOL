@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 16:31:15 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/15 16:52:42 by akharraz         ###   ########.fr       */
+/*   Created: 2023/01/15 03:16:26 by akharraz          #+#    #+#             */
+/*   Updated: 2023/01/15 16:52:28 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+# ifndef CAT_HPP
+# define CAT_HPP
 
-#include <iostream>
+# include "Animal.hpp"
 
-class Animal
+class Cat : public Animal
 {
 protected:
-	std::string type;
+	Brain* brain;
 public:
 	// constructors
-	Animal(/* args */);
-	Animal(const Animal&);
-	Animal(std::string);
+	Cat(/* args */);
+	Cat(const Cat&);
 	// copy assignment opearator
-	Animal& operator=(const Animal&);
+	Cat& operator=(const Cat&);
 	// destructor
-	// ~Animal();
-	virtual ~Animal();
-	// public member function
-	std::string getType(void) const;
-	virtual void	    makeSound(void) const;
+	~Cat();
+	void	makeSound(void) const;
 };
 
 #endif

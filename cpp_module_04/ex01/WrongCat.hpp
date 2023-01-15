@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 16:31:15 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/15 16:52:42 by akharraz         ###   ########.fr       */
+/*   Created: 2023/01/15 03:32:15 by akharraz          #+#    #+#             */
+/*   Updated: 2023/01/15 03:32:57 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+# ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-#include <iostream>
+# include "WrongAnimal.hpp"
 
-class Animal
+class WrongCat : public WrongAnimal
 {
 protected:
-	std::string type;
+	// empty field;
 public:
 	// constructors
-	Animal(/* args */);
-	Animal(const Animal&);
-	Animal(std::string);
+	WrongCat(/* args */);
+	WrongCat(const WrongCat&);
 	// copy assignment opearator
-	Animal& operator=(const Animal&);
+	WrongCat& operator=(const WrongCat&);
 	// destructor
-	// ~Animal();
-	virtual ~Animal();
-	// public member function
-	std::string getType(void) const;
-	virtual void	    makeSound(void) const;
+	~WrongCat();
+	void	makeSound(void) const;
 };
 
 #endif
