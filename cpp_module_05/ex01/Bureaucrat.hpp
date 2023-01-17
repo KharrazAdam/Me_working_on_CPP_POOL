@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:53:17 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/17 08:06:33 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/17 08:52:42 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,31 @@
 #define BUREAUCRAT_HPP
 
 # include <iostream>
-
+# include "Form.hpp"
 class Bureaucrat
 {
 private:
-    int				    grade;
-    const std::string	name;
-    // private function
-    void	IsInGrade(void);
+	int				    grade;
+	const std::string	name;
+	// private function
+	void	IsInGrade(void);
 public:
-    // constructors
-    Bureaucrat();
-    Bureaucrat(int);
-    Bureaucrat(const Bureaucrat&);
-    // copy assignment operator
-    Bureaucrat& operator =(const Bureaucrat&);
-    // destructor
-    ~Bureaucrat();
-    // Name getter and Grade getter
-    const	std::string& getName(void) const;
-    int	getGrade(void)	const;
-    // increment/decrement the bureaucrat grade
-    void	incrementGrade(void);
-    void	decrementGrade(void);
+	// constructors
+	Bureaucrat();
+	Bureaucrat(int);
+	Bureaucrat(const Bureaucrat&);
+	// copy assignment operator
+	Bureaucrat& operator =(const Bureaucrat&);
+	// destructor
+	~Bureaucrat();
+	// Name getter and Grade getter
+	const	std::string& getName(void) const;
+	int	getGrade(void)	const;
+	// increment/decrement the bureaucrat grade
+	void	incrementGrade(void);
+	void	decrementGrade(void);
+	// member function
+	void    signForm(Form);
 };
 
 // overload of the insertion operator
