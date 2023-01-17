@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:53:15 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/17 08:57:57 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/17 22:07:14 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	Bureaucrat::decrementGrade(void)
 // overload of the insertion operator
 std::ostream& operator <<(std::ostream& obj, const Bureaucrat& cheikh)
 {
-	std::cout << cheikh.getName() << ", bureaucrat grade " << cheikh.getGrade() << '\n';
+	std::cout << cheikh.getName() << ", bureaucrat grade " << cheikh.getGrade() << std::endl;
 	return (obj);
 }
 // private function
@@ -71,11 +71,15 @@ void	Bureaucrat::IsInGrade(void)
 		throw ("GRADE IS TOO LOW!\n");
 }
 // member function
-void Bureaucrat::signForm(Form form)
+void Bureaucrat::signForm(Form& form)
 {
-	std::cout << name;
-	if (form.getIsSigned() == true)
-		std::cout << " signed " << form.getName() << '\n';
-	else
-		std::cout << " couldn't signe because his grade is too LOW\n";
+	try
+	{
+		form.beSigned(*this);
+	}
+	catch (const char *msg)
+	{
+		std::cout << name << " couldn't sign " << form.getName() << " because " << msg; 
+	}
+	std::cout << name << " signed " << form.getName() << " \n";
 }

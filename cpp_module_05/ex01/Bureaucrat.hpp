@@ -6,15 +6,18 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:53:17 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/17 08:52:42 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/17 22:07:23 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
 
+
 # include <iostream>
 # include "Form.hpp"
+class Form;
+
 class Bureaucrat
 {
 private:
@@ -38,7 +41,7 @@ public:
 	void	incrementGrade(void);
 	void	decrementGrade(void);
 	// member function
-	void    signForm(Form);
+	void    signForm(Form&);
 };
 
 // overload of the insertion operator
