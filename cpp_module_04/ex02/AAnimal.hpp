@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 16:31:15 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/15 23:30:39 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/16 02:16:51 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef AANIMAL_HPP
+#define AANIMAL_HPP
 
 #include <iostream>
 #include "Brain.hpp"
 
-class Animal
+class AAnimal
 {
 protected:
 	std::string type;
 public:
 	// constructors
-	Animal(/* args */);
-	Animal(const Animal&);
-	Animal(std::string);
+	AAnimal(/* args */);
+	AAnimal(const AAnimal&);
+	AAnimal(std::string);
 	// copy assignment opearator
-	Animal& operator=(const Animal&);
+	AAnimal& operator=(const AAnimal&);
 	// destructor
-	// ~Animal();
-	virtual ~Animal();
+	// ~AAnimal();
+	virtual ~AAnimal();
 	// public member function
 	std::string getType(void) const;
 	virtual void	    makeSound(void) const = 0;

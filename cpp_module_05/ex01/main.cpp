@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/15 03:16:26 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/16 02:09:49 by akharraz         ###   ########.fr       */
+/*   Created: 2023/01/16 19:40:47 by akharraz          #+#    #+#             */
+/*   Updated: 2023/01/17 05:47:09 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef CAT_HPP
-# define CAT_HPP
+#include "Bureaucrat.hpp"
 
-# include "AAnimal.hpp"
-
-class Cat : public AAnimal
+int main()
 {
-protected:
-	Brain* brain;
-public:
-	// constructors
-	Cat(/* args */);
-	Cat(const Cat&);
-	// copy assignment opearator
-	Cat& operator=(const Cat&);
-	// destructor
-	~Cat();
-	void	makeSound(void) const;
-};
-
-#endif
+	
+}

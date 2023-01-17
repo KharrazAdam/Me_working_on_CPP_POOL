@@ -6,14 +6,14 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 19:11:18 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/15 21:09:35 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/16 02:17:30 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Dog.hpp"
 
 // constructors
-Dog::Dog():Animal("Dog")
+Dog::Dog():AAnimal("Dog")
 {
 	brain = new(Brain);
 	std::cout << "Dog constructor call\n";

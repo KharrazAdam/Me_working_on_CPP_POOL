@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/01/14 16:29:49 by akharraz          #+#    #+#              #
-#    Updated: 2023/01/16 02:10:22 by akharraz         ###   ########.fr        #
+#    Created: 2023/01/16 17:53:11 by akharraz          #+#    #+#              #
+#    Updated: 2023/01/16 20:42:06 by akharraz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Abstract_class
+NAME = Bureaucrat
 
-SRC = main.cpp AAnimal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRC = main.cpp Bureaucrat.cpp
 
 OBJ = ${SRC:%.cpp=%.o}
 
-INCLUDES = AAnimal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
+INCLUDES = Bureaucrat.hpp 
 
 all: ${NAME}
 

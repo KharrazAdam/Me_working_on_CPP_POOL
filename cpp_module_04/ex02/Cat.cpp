@@ -6,14 +6,14 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 03:17:41 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/15 21:23:19 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/16 02:17:38 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Cat.hpp"
 
 // constructors
-Cat::Cat():Animal("Cat")
+Cat::Cat():AAnimal("Cat")
 {
     brain = new (Brain);
 	std::cout << "Cat constructor call\n";
