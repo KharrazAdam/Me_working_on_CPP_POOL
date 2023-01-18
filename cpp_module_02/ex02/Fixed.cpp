@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:28:42 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/14 01:23:36 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/18 02:19:27 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,28 @@
 Fixed::Fixed()
 {
 	fixed_point = 0;
-	std::cout << "Default constructor called " << fixed_point << "\n ";
+	// std::cout << "Default constructor called " << fixed_point << "\n ";
 }
 Fixed::Fixed(const int n): fixed_point(n << frac_bits)
 {
-	std::cout << "Int constructor called  " << fixed_point << "\n ";
+	// std::cout << "Int constructor called  " << fixed_point << "\n ";
 	// fixed_point = n << frac_bits;
 }
 Fixed::Fixed(const float n)
 {
-	std::cout << "Float constructor called  " << fixed_point << "\n ";
+	// std::cout << "Float constructor called  " << fixed_point << "\n ";
 	float tmp = n * 256; // 256 is 2^8;
 	fixed_point = (roundf(tmp)); 
 }
 Fixed::Fixed(const Fixed& a)
 {
-	std::cout << "Copy constructor called " << fixed_point << "\n ";
+	// std::cout << "Copy constructor called " << fixed_point << "\n ";
 	*this = a;
 }
 	// Copy assignment operator
 Fixed&  Fixed::operator =(const Fixed& right_handside)
 {
-	std::cout << "Copy assignment operator called\n";
+	// std::cout << "Copy assignment operator called\n";
 	this->fixed_point = right_handside.fixed_point;
 	return *this;
 }
@@ -68,10 +68,11 @@ bool	Fixed::operator !=(const Fixed& right_handside)
 }
 
 	// arithmetic operators :
-Fixed& Fixed::operator +(const Fixed& right_handside)
+Fixed Fixed::operator +(const Fixed& right_handside)
 {
-	this->fixed_point += right_handside.fixed_point;
-	return (*this);
+    Fixed a;
+    a.fixed_point = right_handside.fixed_point + fixed_point;
+	return (a);
 }
 Fixed&	Fixed::operator -(const Fixed& right_handside)
 {
@@ -115,7 +116,7 @@ Fixed	Fixed::operator--(int i)
 	// the destructor :
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called  " << fixed_point << "\n ";	
+	// std::cout << "Destructor called  " << fixed_point << "\n ";	
 }
 	// function to implement:
 float Fixed::toFloat( void ) const
@@ -162,12 +163,12 @@ Fixed& Fixed::min(Fixed& a, Fixed& b)
     //
 void Fixed::setRawBits( int const raw )
 {
-	std::cout << "setRawBits member function called\n";
+	// std::cout << "setRawBits member function called\n";
 	this->fixed_point = raw;
 }
 
 int	Fixed::getRawBits( void ) const
 {
-	std::cout << "getRawBits member function called\n";
+	// std::cout << "getRawBits member function called\n";
 	return (fixed_point);
 }

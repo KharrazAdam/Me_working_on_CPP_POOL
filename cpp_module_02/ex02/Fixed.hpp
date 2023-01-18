@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:07:44 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/11 05:52:58 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/18 02:17:48 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ public:
 	bool	operator ==(const Fixed& right_handside);
 	bool	operator !=(const Fixed& right_handside);
 	//arithmetic operators
-	Fixed&  operator +(const Fixed& right_handside);
+	Fixed   operator +(const Fixed& right_handside);
 	Fixed&	operator -(const Fixed& right_handside);
 	Fixed&	operator *(const Fixed& right_handside);
 	Fixed&	operator /(const Fixed& right_handside);
