@@ -6,17 +6,17 @@
 #    By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/19 07:24:33 by akharraz          #+#    #+#              #
-#    Updated: 2023/01/19 07:24:41 by akharraz         ###   ########.fr        #
+#    Updated: 2023/01/19 13:29:03 by akharraz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = intern
 
-SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 
 OBJ = ${SRC:%.cpp=%.o}
 
-INCLUDES = Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
+INCLUDES = Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp Intern.hpp
 
 all: ${NAME}
 
