@@ -6,19 +6,24 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:53:15 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/17 22:30:58 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/19 07:12:11 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 // constructors
-Bureaucrat::Bureaucrat():grade(0), name("Cheikh")
+Bureaucrat::Bureaucrat():grade(150), name("hamdan al cheikh II")
 {
-	std::cout << "Bureaucrat Default constructor call for " << name << '\n';
+	// std::cout << "Bureaucrat Default constructor call for " << name << '\n';
 }
 Bureaucrat::Bureaucrat(const Bureaucrat& obj):name(obj.name)
 {
 	(*this) = obj;
+}
+Bureaucrat::Bureaucrat(int a):grade(a), name("hamdan al cheikh II")
+{
+	// std::cout << "Bureaucrat type constructor call for " << name << '\n';
+	IsInGrade();
 }
 // copy assignment operator
 Bureaucrat& Bureaucrat::operator =(const Bureaucrat& obj)
@@ -26,22 +31,17 @@ Bureaucrat& Bureaucrat::operator =(const Bureaucrat& obj)
 	grade = obj.grade;
 	return (*this);
 }
-Bureaucrat::Bureaucrat(int a):grade(a), name("Cheikh")
-{
-	std::cout << "Bureaucrat type constructor call for " << name << '\n';
-	IsInGrade();
-}
 // destructor
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << "Bureaucrat Destructor call\n";
+	// std::cout << "Bureaucrat Destructor call\n";
 }
 // Name getter and Grade getter
 const	std::string& Bureaucrat::getName(void) const
 {
 	return (name);
 }
-int	Bureaucrat::getGrade(void)	const
+unsigned int	Bureaucrat::getGrade(void)	const
 {
 	return (grade);
 }
@@ -79,7 +79,13 @@ void Bureaucrat::signForm(AForm& form)
 	}
 	catch (const char *msg)
 	{
-		std::cout << name << " couldn't sign " << form.getName() << " because " << msg; 
+		std::cout << name << " couldn't sign " << form.getName() << " because " << msg;
+        return ;
 	}
 	std::cout << name << " signed " << form.getName() << " \n";
+}
+void	Bureaucrat::executeForm(AForm const & form) const
+{
+    form.execute(*this);
+	std::cout << name << " executed " << form.getName() << '\n';
 }

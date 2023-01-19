@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/01/17 22:28:48 by akharraz          #+#    #+#              #
-#    Updated: 2023/01/19 05:27:48 by akharraz         ###   ########.fr        #
+#    Created: 2023/01/19 07:24:33 by akharraz          #+#    #+#              #
+#    Updated: 2023/01/19 07:24:41 by akharraz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 28B
+NAME = intern
 
 SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 

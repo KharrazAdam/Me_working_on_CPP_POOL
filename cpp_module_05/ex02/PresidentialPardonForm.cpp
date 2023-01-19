@@ -6,39 +6,42 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 08:11:03 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/18 08:33:10 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/19 06:48:28 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm()
+PresidentialPardonForm::PresidentialPardonForm(): AForm("the Presidential Pardon Form", false, 5, 25), target("target")
 {
-	std::cout << "Default constructor call\n";
+	// std::cout << "Default constructor call\n";
 }
-RobotomyRequestForm::RobotomyRequestForm(std::string random):target(random)
+PresidentialPardonForm::PresidentialPardonForm(std::string random):AForm("the Presidential Pardon Form", false, 5, 25), target(random)
 {
-	std::cout << "Parameter constructor call\n";
+	// std::cout << "Parameter constructor call\n";
 }
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& obj)
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& obj): AForm("the Presidential Pardon Form", false, 5, 25)
 {
-	std::cout << "copy constructor call\n";
+	// std::cout << "copy constructor call\n";
 	(*this) = obj;
 }
 // copy assignment operator
-RobotomyRequestForm& RobotomyRequestForm:: operator=(const RobotomyRequestForm& obj)
+PresidentialPardonForm& PresidentialPardonForm:: operator=(const PresidentialPardonForm& obj)
 {
 	(void)obj;
 	target = obj.target;
 	return (*this);
 }
 // destructor
-RobotomyRequestForm::~RobotomyRequestForm()
+PresidentialPardonForm::~PresidentialPardonForm()
 {
-	std::cout << "destructor call\n";
+	// std::cout << "destructor call\n";
 }
-
-void RobotomyRequestForm::execute(Bureaucrat const & executor) const
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
+	if (getIsSigned() == false)
+		throw ("the form is not signed\n");
+	if (executor.getGrade() > getExecuteGrade())
+		throw ("the bureaucrate's grade isn't enough to execute the form\n");
 	std::cout << target << " has been pardoned by Zaphod Beeblebrox.\n";
 }

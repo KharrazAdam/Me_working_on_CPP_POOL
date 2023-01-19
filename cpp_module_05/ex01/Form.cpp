@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 08:12:01 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/17 22:05:39 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/19 06:56:48 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 // constructors
 Form::Form():name("cheikh"), is_signed(false), execute_grade(10), sign_grade(5)
 {
-	std::cout << "Default constructor call\n";
+	// std::cout << "Default constructor call\n";
 }
 Form::Form(const Form& obj):name(obj.name), execute_grade(obj.execute_grade), sign_grade(obj.sign_grade)
 {
@@ -24,7 +24,7 @@ Form::Form(const Form& obj):name(obj.name), execute_grade(obj.execute_grade), si
 Form::Form(std::string n, bool is_s, int ex_grade, int si_grade):name(n), is_signed(is_s), execute_grade(ex_grade), sign_grade(si_grade)
 {
 	IsInGrade();
-	std::cout << "parameter constructor call\n";
+	// std::cout << "parameter constructor call\n";
 }
 // copy assignment operator
 Form& Form::operator=(const Form& obj)
@@ -35,7 +35,7 @@ Form& Form::operator=(const Form& obj)
 //  destructor
 Form::~Form()
 {
-	std::cout << "Form destructor call\n";
+	// std::cout << "Form destructor call\n";
 }
 // bounds check
 void	Form::IsInGrade(void)
@@ -76,7 +76,10 @@ std::ostream& operator <<(std::ostream& obj, const Form& format)
 // public member functions
 void Form::beSigned(Bureaucrat bureau)
 {
+    if (is_signed == true)
+		throw ("THE FORM IS ALREADY SIGNED\n");
 	if (bureau.getGrade() > sign_grade)
 		throw ("GRADE IS TOO LOW TO SIGN THE FORM\n");
 	is_signed = true;
 }
+

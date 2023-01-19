@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:28:42 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/18 02:19:27 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/19 00:55:36 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ Fixed&  Fixed::operator =(const Fixed& right_handside)
 	this->fixed_point = right_handside.fixed_point;
 	return *this;
 }
-	// comparison operators:
 bool	Fixed::operator >(const Fixed& right_handside)
+	// comparison operators:
 {
 	return (this->fixed_point > right_handside.fixed_point);
 }
@@ -150,7 +150,7 @@ Fixed&	Fixed::max(const Fixed& a, const Fixed& b)
 }
 Fixed&	Fixed::min(const Fixed& a, const Fixed& b)
 {
-	if (a.fixed_point < b.fixed_point)
+	if (Fixed(a) < Fixed(b))
 		return ((Fixed&) a);
 	return ((Fixed&) b);
 }
