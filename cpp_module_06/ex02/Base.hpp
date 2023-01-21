@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 19:33:09 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/21 20:27:29 by akharraz         ###   ########.fr       */
+/*   Created: 2023/01/21 13:12:37 by akharraz          #+#    #+#             */
+/*   Updated: 2023/01/21 23:09:57 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cast.hpp"
+#ifndef BASE_HPP
+#define BASE_HPP
 
-int main(int ac, char **av)
+# include <iostream>
+# include <ctime>
+
+class Base
 {
-	int	type;
+	public:
+		virtual ~Base();
+};
 
-	if (ac != 2 || !av[1][0])
-		return 1;
-	type = get_type(std::string(av[1]));
-	if (print_cast(av[1], type) < 0)
-		return (1);
-	// std::cout << "the type is " << type << '\n';
-	// std::cout << -1.f << type << '\n';
-	return (0);
-}
+Base*   generate(void);
+void    identify(Base* p);
+void    identify(Base& r);
+#endif
