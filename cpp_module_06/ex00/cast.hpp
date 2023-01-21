@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 08:51:25 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/21 09:55:55 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/22 00:20:24 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include <cstdlib>
+# include <limits>
+
 
 // function that returns us a number significan the type of the number (i.e, int or float or double or char)
 int	get_type(const std::string& str);

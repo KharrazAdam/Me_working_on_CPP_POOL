@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 08:35:18 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/21 11:17:04 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/22 00:47:47 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,13 +87,16 @@ void	doubleToTypes(const char* str)
         std::cout << "int: conversion will result an overflowed number\n";
     else
 	    std::cout << "int: " << i << '\n';
-	std::cout << "float: " << f;
-	if (d > 2147483647 || d < 1.17549e-038)
+	if (d > 2147483647 || d < std::numeric_limits<float>::min())
         std::cout << "float: conversion will result an overflowed number\n";
-    else if ((f - i))
-		std::cout << "f\n";
 	else
-		std::cout << ".0f\n";
+    {
+        std::cout << "float: " << f;
+        if ((f - i))
+	    	std::cout << "f\n";
+	    else
+	    	std::cout << ".0f\n";
+    }
 	std::cout << "double: " << d;
 	if (d - i)
 		std::cout << "\n";
