@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 08:35:18 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/22 00:47:47 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/22 01:06:34 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	intToTypes(const char* str)
 	f = static_cast<float>(i);
 	d = static_cast<double>(i);
 
-    if (i < -32768 || i > 32767)
+	if (i < -32768 || i > 32767)
 		std::cout << "char: conversion will result an overflowed number\n";
 	else if (isprint(c))
 		std::cout << "char: '" << c << "\'\n";
@@ -53,7 +53,7 @@ void	floatToTypes(const char* str)
 	d = static_cast<double>(f);
 	if (f > 32767 || f < -32768)
 		std::cout << "char: conversion will result an overflowed number\n";
-    else if (isprint(c))
+	else if (isprint(c))
 		std::cout << "char: '" << c << "\'\n";
 	else
 		std::cout << "Non displayable\n";
@@ -83,20 +83,20 @@ void	doubleToTypes(const char* str)
 		std::cout << "char: '" << c << "\'\n";
 	else
 		std::cout << "Non displayable\n";
-    if (d > 2147483647 || d < -2147483648)
-        std::cout << "int: conversion will result an overflowed number\n";
-    else
-	    std::cout << "int: " << i << '\n';
-	if (d > 2147483647 || d < std::numeric_limits<float>::min())
-        std::cout << "float: conversion will result an overflowed number\n";
+	if (d > 2147483647 || d < -2147483648)
+		std::cout << "int: conversion will result an overflowed number\n";
 	else
-    {
-        std::cout << "float: " << f;
-        if ((f - i))
-	    	std::cout << "f\n";
-	    else
-	    	std::cout << ".0f\n";
-    }
+		std::cout << "int: " << i << '\n';
+	if (d > 2147483647 || d < -2147483648)
+		std::cout << "float: conversion will result an overflowed number\n";
+	else
+	{
+		std::cout << "float: " << f;
+		if ((f - i))
+			std::cout << "f\n";
+		else
+			std::cout << ".0f\n";
+	}
 	std::cout << "double: " << d;
 	if (d - i)
 		std::cout << "\n";

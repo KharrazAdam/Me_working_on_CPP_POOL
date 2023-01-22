@@ -6,7 +6,7 @@
 #    By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 11:20:59 by akharraz          #+#    #+#              #
-#    Updated: 2023/01/21 13:33:01 by akharraz         ###   ########.fr        #
+#    Updated: 2023/01/22 00:57:21 by akharraz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,10 +18,10 @@ OBJ = ${SRC:%.cpp=%.o}
 
 all: ${NAME}
 
-${NAME}: ${OBJ} serialize.hpp
+${NAME}: ${OBJ}
 	c++ -Wall -Wextra -Werror -std=c++98 $(OBJ) -o $(NAME)
 
-%.o : %.cpp cast.hpp
+%.o : %.cpp
 	c++ -Wall -Wextra -Werror -std=c++98 -c $< -o $@
 
 clean:
