@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:07:49 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/23 17:17:15 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/23 20:32:18 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ public:
 			elem = NULL;
 		else 
 			elem = new T[a_size];
+		for (size_t i = 0; i < a_size; i++)
+			this->elem[i] = T();
 	};
 	Array(const Array& obj):a_size(obj.a_size)
 	{
@@ -60,11 +62,16 @@ public:
 			this->elem[i] = obj.elem[i];
 	}
 	// overloading subscript operator
-	Array& operator[] (unsigned int index)
+	T& operator[] (unsigned int index)
 	{
 		if (index >= this->a_size)
-			std::cout << "hello";
-			// throw (std::exception);
+			throw (std::exception());
+		return (elem[index]);
+	}
+	const T& operator[] (unsigned int index) const
+	{
+		if (index >= this->a_size)
+			throw (std::exception());
 		return (elem[index]);
 	}
 	// destructor
@@ -74,7 +81,7 @@ public:
 		if (elem)
 			delete[] elem;
 	};
-	void size(void)
+	unsigned int size(void)
 	{
 		return a_size;
 	}
