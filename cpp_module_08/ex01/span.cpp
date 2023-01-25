@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 00:18:32 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/25 08:49:11 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/25 09:22:15 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,16 +74,15 @@ unsigned int Span::shortestSpan(void)
 	std::vector<int>::iterator it;
 	std::vector<int>::iterator it2;
 
-    if (!vicky.size() || vicky.size() == 1)
+	if (!vicky.size() || vicky.size() == 1)
 		throw("no enough elements");
 	std::sort<int>(tmp.begin(), tmp.end());
 	it = tmp.begin();
 	it2 = it + 1;
-    int ret = *(std::max_element(vicky.begin(), vicky.end())) - *(std::min_element(vicky.begin(), vicky.end()));
+	int ret = *(std::max_element(vicky.begin(), vicky.end())) - *(std::min_element(vicky.begin(), vicky.end()));
 	for (; it != tmp.end() - 1; it++)
 	{
-        std::cout << "here" << std::endl;
-        it2 =  it + 1;
+		it2 =  it + 1;
 		for (; it2 != tmp.end(); it2++)
 		{
 			if (*it2 >= *it && *(it2) - *(it) < ret)
@@ -91,4 +90,9 @@ unsigned int Span::shortestSpan(void)
 		}
 	}
 	return ret;
+}
+// iterator insert( const_iterator pos, size_type count, const T& value );
+void	Span::range_of_iterators(unsigned int size)
+{
+	vicky.insert(vicky.begin(), size, -42);
 }
