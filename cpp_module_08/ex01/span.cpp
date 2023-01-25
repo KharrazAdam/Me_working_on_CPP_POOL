@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 00:18:32 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/25 12:28:54 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/25 13:43:55 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,4 @@ unsigned int Span::shortestSpan(void)
 	}
 	return ret;
 }
-// iterator insert( const_iterator pos, size_type count, const T& value );
-void	Span::range_of_iterators(unsigned int size)
-{
-	vicky.insert(vicky.begin(), size, -42);
-}
+

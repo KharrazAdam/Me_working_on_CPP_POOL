@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 00:09:45 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/25 12:15:42 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/25 14:06:30 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-
 class Span
 {
 private:
@@ -36,6 +35,11 @@ public:
 	void	addNumber(int x);
 	unsigned	int longestSpan(void);
 	unsigned	int shortestSpan(void);
-    void        range_of_iterators(std::vector<int>::iterator, std::vector<int>::iterator);
+	template <typename T> void  rangeofiterators(T first, T last)
+	{
+		if (std::distance(first, last) > static_cast<long>(N - vicky.size()))
+			throw ("cannot add this amount of elements");
+		vicky.insert(vicky.begin(), first, last);
+	};
 };
 #endif // SPAN_HPP
