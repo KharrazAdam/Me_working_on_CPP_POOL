@@ -6,7 +6,7 @@
 #    By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/25 09:34:22 by akharraz          #+#    #+#              #
-#    Updated: 2023/01/25 09:38:57 by akharraz         ###   ########.fr        #
+#    Updated: 2023/01/25 14:34:41 by akharraz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ OBJ = ${SRC:%.cpp=%.o}
 
 all: ${NAME}
 
-${NAME}: ${OBJ} span.hpp
+${NAME}: ${OBJ} MutantStack.hpp
 	c++ -Wall -Wextra -Werror -std=c++98 $(OBJ) -o $(NAME)
 
 %.o : %.cpp
