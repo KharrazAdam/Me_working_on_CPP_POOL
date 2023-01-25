@@ -6,9 +6,13 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 04:34:13 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/24 23:33:21 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/25 14:32:46 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+#ifndef EASYFIND
+#define EASYFIND
 
 #include <algorithm>
 #include <iostream>
@@ -22,3 +26,5 @@ template <typename T> int easyfind(T& container, int num)
 	std::cout << *(std::find(container.begin(), container.end(), num)) << std::endl;
 	return (0);
 }
+
+#endif
