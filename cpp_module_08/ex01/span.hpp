@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 00:09:45 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/25 09:22:35 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/25 12:15:42 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ public:
 	void	addNumber(int x);
 	unsigned	int longestSpan(void);
 	unsigned	int shortestSpan(void);
-    void        range_of_iterators(unsigned int);
+    void        range_of_iterators(std::vector<int>::iterator, std::vector<int>::iterator);
 };
 #endif // SPAN_HPP
