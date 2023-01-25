@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 00:36:02 by akharraz          #+#    #+#             */
-/*   Updated: 2023/01/25 06:00:51 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/01/25 08:49:20 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@ int main(void)
 {
 	try{
 		Span span(9);
-		for (int i = 15; i > 7; i--)
-			span.addNumber(i);
-		span.shortestSpan();
+			span.addNumber(31);
+            std::cout << span.shortestSpan() << std::endl;
 		// std::cout << span.longestSpan() << std::endl;
 	}
 	catch(std::exception out)
