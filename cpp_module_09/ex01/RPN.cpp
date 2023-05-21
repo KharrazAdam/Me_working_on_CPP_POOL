@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 15:05:57 by akharraz          #+#    #+#             */
-/*   Updated: 2023/05/21 11:11:36 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/05/21 11:56:13 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 RPN::RPN()
 {
-	std::cout << "Default constructor's call" << std::endl;
+	// std::cout << "Default constructor's call" << std::endl;
 }
 
 RPN::RPN(RPN& obj)
 {
-	std::cout << "Copy constructor's call" << std::endl;
+	// std::cout << "Copy constructor's call" << std::endl;
 	(*this) = obj;
 }
 
@@ -31,7 +31,13 @@ RPN& RPN::operator=(const RPN& obj)
 
 RPN::~RPN()
 {
-	std::cout << "Default destructor's call" << std::endl;
+	// std::cout << "Default destructor's call" << std::endl;
+}
+
+void	RPN::clear_stack(void)
+{
+	while (!stack.empty())
+		stack.pop();
 }
 
 bool	RPN::is_num(std::string &ss)
@@ -44,16 +50,27 @@ bool	RPN::is_num(std::string &ss)
 
 bool	RPN::is_token(std::string &ss)
 {
-	if (ss.size() > 1)
+	int	left;
+	int	right;
+
+	if (ss.size() > 1 || stack.size() < 2)
 		return (false);
+	right = stack.top();
+	stack.pop();
+	left = stack.top();
+	stack.pop();
 	if (ss.front() == '+')
-		;
+		stack.push(left + right);
 	if (ss.front() == '-')
-		;
+		stack.push(left - right);
 	if (ss.front() == '*')
-		;
+		stack.push(left * right);
 	if (ss.front() == '/')
-		;
+	{
+		if (!right)
+			return (false);
+		stack.push(left / right);
+	}
 	return (true);
 }
 
@@ -73,17 +90,13 @@ bool	RPN::parse(const char *av)
 			return (false);
 		splited.clear();
 	}
-	while (!stack.empty())
-	{
-		std::cout << stack.top() << std::endl;
-		stack.pop();
-	}
-	return (true);
+	return (printf("allo\n"), stack.size() == 1);
 }
 
 bool	RPN::RPN_start(const char *av)
 {
 	if (parse(av) == false)
 		return (std::cerr << "Error" << std::endl, false);
+	std::cout << stack.top() << std::endl;
 	return (true);
 }

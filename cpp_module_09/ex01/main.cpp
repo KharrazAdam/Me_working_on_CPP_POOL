@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 15:02:14 by akharraz          #+#    #+#             */
-/*   Updated: 2023/05/20 17:14:54 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/05/21 11:53:11 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int	main(int ac, char *av[])
 	if (ac != 2)
 		return (std::cerr << "one arg required" << std::endl, 1);
 	if (rpn.RPN_start(av[1]) == false)
-		return (1);
-	return (0);
+		return (rpn.clear_stack(), 1);
+	return (rpn.clear_stack(), 1);
 }

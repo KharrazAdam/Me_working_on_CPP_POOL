@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 15:03:58 by akharraz          #+#    #+#             */
-/*   Updated: 2023/05/21 11:05:06 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/05/21 11:47:56 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ public:
 	RPN& operator=(const RPN& obj);
 	~RPN();
 	
-	bool	RPN_start(const char *);	
+	bool	RPN_start(const char *);
+	void	clear_stack();
 };
 
 #endif
