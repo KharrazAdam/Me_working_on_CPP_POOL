@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 03:12:39 by akharraz          #+#    #+#             */
-/*   Updated: 2023/05/22 10:34:03 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/05/22 10:37:26 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,7 @@ void	PmergeMe::vec_output()
 	while (i < size)
 	{
 		std::cout << vec[i] << " ";
-		if (i == 3 && size > 3)
+		if (i == 3 && size > 5)
 		{
 			std::cout << "[...]";
 			break ;
@@ -164,7 +164,7 @@ void	PmergeMe::vec_input()
 	while (i < size)
 	{
 		std::cout << inpvec[i] << " ";
-		if (i == 3 && size > 3)
+		if (i == 3 && size > 5)
 		{
 			std::cout << "[...]";
 			break ;
@@ -284,7 +284,7 @@ void	PmergeMe::de_output()
 	while (i < size)
 	{
 		std::cout << de[i] << " ";
-		if (i == 3 && size > 3)
+		if (i == 3 && size > 5)
 		{
 			std::cout << "[...]";
 			break ;
@@ -303,7 +303,7 @@ void	PmergeMe::de_input()
 	while (i < size)
 	{
 		std::cout << inpde[i] << " ";
-		if (i == 3 && size > 3)
+		if (i == 3 && size > 5)
 		{
 			std::cout << "[...]";
 			break ;
