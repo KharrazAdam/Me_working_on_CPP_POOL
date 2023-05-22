@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 15:05:57 by akharraz          #+#    #+#             */
-/*   Updated: 2023/05/21 11:56:13 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/05/21 13:55:22 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ RPN& RPN::operator=(const RPN& obj)
 
 RPN::~RPN()
 {
-	// std::cout << "Default destructor's call" << std::endl;
+	// std::cout << "Destructor's call" << std::endl;
 }
 
 void	RPN::clear_stack(void)
@@ -90,7 +90,7 @@ bool	RPN::parse(const char *av)
 			return (false);
 		splited.clear();
 	}
-	return (printf("allo\n"), stack.size() == 1);
+	return (stack.size() == 1);
 }
 
 bool	RPN::RPN_start(const char *av)
