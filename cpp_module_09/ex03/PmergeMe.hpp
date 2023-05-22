@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 03:17:42 by akharraz          #+#    #+#             */
-/*   Updated: 2023/05/22 06:59:56 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/05/22 07:16:29 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,20 @@ private:
 			k++; 
 		}
 	}
+	
+	void	con_mer_ins(T& cont)
+	{
+		size_t size = cont.size();
+
+		if (size < 100)
+			return con_insertion(cont), (void)size;
+		T	left(cont.begin(), cont.begin() + (size / 2));
+		T	right(cont.begin() + (size / 2), cont.end());
+		con_mer_ins(left);
+		con_mer_ins(right);
+		con_merge(left, right, cont);
+	}
+
 public:
 	~PmergeMe(){}
 
@@ -113,7 +127,7 @@ public:
 	{
 		if (con_fill(av) == false)
 			return (false);
-		con_insertion(con);
+		con_mer_ins(con);
 		return (true);
 	}
 

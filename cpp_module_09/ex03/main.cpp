@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 03:18:07 by akharraz          #+#    #+#             */
-/*   Updated: 2023/05/22 07:00:30 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/05/22 07:15:36 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(int ac, char **av)
 {
 	(void)ac;
-    PmergeMe<std::deque<int> > i;
+    PmergeMe<std::vector<int> > i;
 	if (i.con_sort(av) == false)
 		return (std::cerr << "Error" << std::endl, 1);
 	i.con_output();
