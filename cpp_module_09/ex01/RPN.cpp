@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 15:05:57 by akharraz          #+#    #+#             */
-/*   Updated: 2023/05/21 13:55:22 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/05/22 10:28:38 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ bool	RPN::parse(const char *av)
 
 	while (ss >> splited)
 	{
-		if (is_num(splited) == true)
+		if (splited.size() == 1 && is_num(splited) == true)
 			stack.push(atoi(splited.c_str()));
 		else if (is_token(splited) == true)
 			;
@@ -96,7 +96,7 @@ bool	RPN::parse(const char *av)
 bool	RPN::RPN_start(const char *av)
 {
 	if (parse(av) == false)
-		return (std::cerr << "Error" << std::endl, false);
+		return std::cerr << "Error" << std::endl, false;
 	std::cout << stack.top() << std::endl;
 	return (true);
 }

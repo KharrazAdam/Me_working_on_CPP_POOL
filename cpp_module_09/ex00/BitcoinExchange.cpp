@@ -6,7 +6,7 @@
 /*   By: akharraz <akharraz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 01:33:48 by akharraz          #+#    #+#             */
-/*   Updated: 2023/05/20 17:12:24 by akharraz         ###   ########.fr       */
+/*   Updated: 2023/05/22 10:21:35 by akharraz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,9 +144,15 @@ bool	BitcoinExchange::store_data()
 void	BitcoinExchange::print_price(int line, std::string key, double value)
 {
 	std::map<std::string, double>::iterator it;
-	it = (dabase.lower_bound(key));
-	if (it != dabase.begin())
-		it--;
+	it = dabase.find(key);
+	if (it != dabase.end())
+		;
+	else
+	{
+		it = (dabase.lower_bound(key));
+		if (it != dabase.begin())
+			it--;
+	}
 	if (key.compare((*dabase.begin()).first) < 0)
 		print_error(line, "no values before the date!");
 	else
